@@ -1,0 +1,28 @@
+
+@import 'src/styles/ultilities/variables.color';
+
+.introduce {
+
+    img {
+        width: 100%;
+    }
+
+    .content {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ly {
+        font-size: 2.2rem;
+    }
+
+    .bg-light {
+        background-color: $color-light-gray;
+    }
+}
+
+.title {
+    padding: 3rem;
+}

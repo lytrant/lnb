@@ -1,0 +1,99 @@
+@import 'src/styles/ultilities/variables';
+@import 'src/styles/ultilities/variables.color';
+
+// .top-bar {
+//     z-index: 4;
+//     position: fixed;
+//     width: 100%;
+//     height: $heigh-100;
+//     background: rgb(0, 161, 156);
+//     background: -moz-linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+//     background: -webkit-linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+//     background: linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+
+//     .logo {
+//         display: inherit;
+
+//     }
+
+//     .category {
+//         display: inherit;
+//         background: transparent;
+//     }
+
+//     .navbar {
+//         // height: inherit;
+//         width: 95%;
+
+//         .navbar-collapse.show {
+//             margin-top: 2px;
+
+//             ul {
+//                 background-color: $color-light-gray;
+//             }
+//         }
+
+//         ul {
+//             width: 70%;
+//         }
+
+//         .item-cat {
+
+//             &.active,
+//             &:hover {
+//                 border-bottom: 2px solid $color-main;
+//             }
+
+//             .nav-link {
+//                 &a {
+//                     width: max-content;
+//                 }
+//             }
+//         }
+//     }
+
+//     .nav-option {
+//         width: 5%;
+//     }
+
+//     img {
+//         width: 30px;
+//         height: 35px;
+//         margin: 0 15px;
+//     }
+// }
+
+.app-top-bar {
+    background: -moz-linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+    background: linear-gradient(90deg, rgba(148, 176, 183) 0%, rgba(194, 200, 197, 1) 50%, rgba(221, 221, 218, 1) 100%);
+
+    & .logo,
+    & .navbar-toggler {
+        outline: none;
+    }
+
+    & .logo,
+    &li {
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 30px;
+            height: 35px;
+        }
+    }
+
+    li {
+
+        &.active,
+        &:active {
+            border-bottom: 2px solid $color-main;
+        }
+    }
+}
