@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from '../core/layout/layout.component';
 import { TravelsComponent } from './travels/travels.component';
 import { PersonnelComponent } from './personnel/personnel.component';
-import { BookReviewComponent } from './books/book-review/book-review.component';
 import { MainComponent } from './main/main.component';
+import { ComponentsModule } from '../shared/components/components.module';
 
 const routes: Routes =  [
   {
-    path: 'main',
-    component: MainComponent,
+    path: '',
     children: [
       {
         path: 'books',
@@ -24,6 +22,10 @@ const routes: Routes =  [
         path: 'personnel',
         component: PersonnelComponent
       },
+      {
+        path: 'main',
+        component: MainComponent,
+      }
     ]
   }
 ];
@@ -32,6 +34,7 @@ const routes: Routes =  [
   declarations: [TravelsComponent, PersonnelComponent, MainComponent],
   imports: [
     CommonModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ]
 })

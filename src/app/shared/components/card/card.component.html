@@ -1,9 +1,29 @@
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="px-3 row">
+    <div class="card">
+        <img class="card-img-top" src="../../../../assets/images/DSC02187.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title: Put title here but not exceed two lines
+            </h5>
+            <hr>
+            <div class="d-flex align-items-center viewer">
+                <div class="d-flex justify-content-between comment">
+                    <span class="align-items-center view-no">
+                        <i class="material-icons mr-1">
+                            remove_red_eye
+                        </i>
+                        {{totalViewed}}
+                    </span>
+                    <span>Bình luận</span>
+                </div>
+                <span class="align-items-center justify-content-center like-no">
+                    <p class="ml-5" *ngIf="totalLoved > 0">{{totalLoved}}</p>
+                    <i class="pink heart1" [ngClass]="{'heart-line': isLoved}" (click)="onFavorite($event)"></i>
+                </span>
+                <!-- <span class="align-items-center like-no" *ngIf="isLoved">
+                    <p class="mr-1">{{totalLoved}}</p>
+                    <i class="material-icons pink heart1" (click)="onFavorite($event)">favorite</i>
+                </span> -->
+            </div>
+        </div>
     </div>
 </div>

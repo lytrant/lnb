@@ -1,0 +1,129 @@
+@import 'src/styles/ultilities/variables.color';
+@import 'src/styles/ultilities/variables';
+
+.card {
+    height: 90%;
+    cursor: pointer;
+
+    img {
+        height: 60%;
+    }
+
+    .card-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+    }
+
+    .card-body {
+
+        .viewer {
+            font-size: 14px;
+
+            .comment {
+                width: 60%;
+            }
+        }
+
+        .view-no,
+        .like-no {
+            display: inherit;
+        }
+
+        i.pink {
+            color: $color-heart;
+        }
+
+        .view-no {
+            cursor: context-menu;
+        }
+
+        .card-title:hover {
+            color: rgba(0, 0, 0, .5);
+        }
+    }
+
+
+    .heart1 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 90%;
+        left: 87%;
+        transform: translate(-50%, -50%);
+        background: url('./../../../../assets/icons/heart.png') no-repeat;
+        background-position: 0 0;
+        cursor: pointer;
+    }
+
+    .heart-line {
+        background-position: -2800px 0;
+        transition: 1s steps(28);
+        color: black;
+    }
+}
+
+@media only screen and (max-width: $device-xlg-width) { 
+    .heart1 {
+        top: 94% !important;
+        left: 87% !important;
+    }
+    .viewer {
+
+        .like-no {
+            p {
+                margin-left: 2rem !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $device-lg-width) {
+    .card {
+        img {
+            height: 50%;
+        }
+
+        .heart1 {
+            top: 90% !important;
+            left: 81% !important;
+        }
+
+        .viewer {
+
+            .comment {
+                width: 50%;
+                .view-no {
+                    display: none;
+                }
+            } 
+            p {
+                margin-left: 0.5rem !important;
+            }
+            
+        }
+
+    }
+}
+
+@media only screen and (max-width: $device-sm-width) {
+    .card {
+        img {
+            height: 60%;
+        }
+
+        .heart1 {
+            top: 90% !important;
+            left: 87% !important;
+        }
+
+        .like-no {
+            p {
+                margin-left: 2rem !important;
+            }
+        }
+    }
+}
